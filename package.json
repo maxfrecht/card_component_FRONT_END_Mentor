@@ -1,0 +1,22 @@
+{
+  "name": "profile-card-component-main",
+  "version": "1.0.0",
+  "description": "first front end mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass" : "sass --watch scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxfrecht/card_component_FRONT_END_Mentor.git"
+  },
+  "author": "maxfrecht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxfrecht/card_component_FRONT_END_Mentor/issues"
+  },
+  "homepage": "https://github.com/maxfrecht/card_component_FRONT_END_Mentor#readme",
+  "dependencies": {
+    "sass": "^1.29.0"
+  }
+}
