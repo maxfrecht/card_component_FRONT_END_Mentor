@@ -9,15 +9,7 @@ $primary-text: hsl(0, 0%, 59%);
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-.attribution {
-    position: absolute;
-    font-size: 11px; text-align: center; 
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    
-}
-.attribution a { color: hsl(228, 45%, 44%); }
+
 
 body {
     height: 100vh;
@@ -94,17 +86,28 @@ body {
     }
 }
 
-/* Card */
-
-.card {
-    max-width: 380px;
+.container {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+/* Card */
+
+.card {
+    max-width: 380px;
+    margin: 0 auto;
     border-radius: 20px;
     background: #fafafa;
     box-shadow: 3px 3px 5px 2px rgba(51, 51, 51, 0.2);
+    transform: translate(0,0);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(0, -5px);
+    }
 }
 
 .card-top {
@@ -114,18 +117,18 @@ body {
 }
 
 .card-image-container {
-    margin-bottom: -58px;
+    margin-bottom: -60px;
 }
 
 .card-image-container > img {
     position: relative;
-    $img-height : 108px;
+    $img-height :110px;
     height: $img-height;
     top: -($img-height / 2);
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
-    border: 4px solid #fafafa;
+    border: 5px solid #fafafa;
 }
 
 .card-content {
@@ -134,8 +137,9 @@ body {
 
     h4 {
         color: hsl(229, 23%, 23%);
-        margin-bottom: 7px;
+        margin-bottom: 10px;
         font-weight: 700;
+        font-size: 18px;
 
         span {
             color: $primary-text;
@@ -158,6 +162,7 @@ body {
 }
 
 .stats-item .number {
+    font-size: 18px;
     color: hsl(229, 23%, 23%);
     font-weight: 700;
     margin-bottom: 7px;
@@ -165,4 +170,21 @@ body {
 
 .stats-item .type {
     font-size: 12px;
+}
+
+/* ------------- Attribution ---------*/
+
+.attribution {
+    position: absolute;
+    font-size: 11px; 
+    text-align: center; 
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    color: white;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }

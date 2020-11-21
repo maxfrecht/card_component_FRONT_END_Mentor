@@ -5,19 +5,6 @@
   padding: 0;
 }
 
-.attribution {
-  position: absolute;
-  font-size: 11px;
-  text-align: center;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.attribution a {
-  color: #3e52a3;
-}
-
 body {
   height: 100vh;
   background: #19a2ae;
@@ -88,16 +75,26 @@ body {
     right: -350px;
   }
 }
-/* Card */
-.card {
-  max-width: 380px;
+.container {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Card */
+.card {
+  max-width: 380px;
+  margin: 0 auto;
   border-radius: 20px;
   background: #fafafa;
   box-shadow: 3px 3px 5px 2px rgba(51, 51, 51, 0.2);
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translate(0, -5px);
 }
 
 .card-top {
@@ -107,17 +104,17 @@ body {
 }
 
 .card-image-container {
-  margin-bottom: -58px;
+  margin-bottom: -60px;
 }
 
 .card-image-container > img {
   position: relative;
-  height: 108px;
-  top: -54px;
+  height: 110px;
+  top: -55px;
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
-  border: 4px solid #fafafa;
+  border: 5px solid #fafafa;
 }
 
 .card-content {
@@ -126,8 +123,9 @@ body {
 }
 .card-content h4 {
   color: #2d3248;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   font-weight: 700;
+  font-size: 18px;
 }
 .card-content h4 span {
   color: #969696;
@@ -147,6 +145,7 @@ body {
 }
 
 .stats-item .number {
+  font-size: 18px;
   color: #2d3248;
   font-weight: 700;
   margin-bottom: 7px;
@@ -154,6 +153,22 @@ body {
 
 .stats-item .type {
   font-size: 12px;
+}
+
+/* ------------- Attribution ---------*/
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
